@@ -1,0 +1,49 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} !^www\.macmannis\.com
+RewriteRule (.*) http://www.macmannis.com/$1 [R=301,L]
+
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^?]*) index.php?p=$1 [L,QSA]
+
+ExpiresActive On
+ExpiresDefault A0
+
+ServerSignature Off
+
+Header unset ETag
+FileETag None
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/php
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE font/truetype
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE application/octet-stream
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/x-httpd-php
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+<ifmodule mod_mime.c>
+	Addtype font/truetype .ttf
+	AddType application/vnd.ms-fontobject .eot
+	AddType application/octet-stream .woff
+</ifmodule>
+
+<FilesMatch "\.(ttf|eot|woff|css)$">
+	<IfModule mod_headers.c>
+		Header set Access-Control-Allow-Origin "*"
+	</IfModule>
+</FilesMatch>
+
+<FilesMatch "\.(png|esi|css|js|gif|woff|oet|ttf)$">
+	ExpiresDefault A2592000
+	Header append Cache-Control "public"
+</FilesMatch>

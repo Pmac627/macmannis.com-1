@@ -1,0 +1,36 @@
+/* TEAM */
+	Coder: Patrick MacMannis	
+	Contact: pat [at] macmannis.com
+	Twitter: @pat_macmannis
+	Google+: https://plus.google.com/116308610031809394287
+	From: Irwin, PA, USA
+
+/* THANKS */
+	Item: jQuery 1.7
+	Type: JavaScript Library
+	Site: jquery.com
+	
+	Item: ThickBox 3.1
+	Type: JavaScript Library Extension
+	Site: jquery.com/demo/thickbox
+
+	Item: FOUT-B-Gone
+	Type: JavaScript FOUT Reduction Script
+	Site: webink.com/fout-b-gone
+
+	Item: Where Stars Shine The Brightest
+	Type: Font
+	Site: brittneymurphydesign.com
+
+/* SITE */
+	Last update: 2012/08/26
+	Language: English
+	Doctype: HTML5
+	IDE: Notepad++
+
+	W3C Validator(HTML5): Passed 2012/08/29
+	YSlow(V2): Grade A (100) 2012/08/29
+	YSlow(Small Site or Blog): Grade A (100) 2012/08/29
+	YSlow(Web Metrics Framework - Top Sites): Grade B (83) 2012/08/26
+	WooRank: 58.1/100 2012/08/29
+	Google PageSpeed: 97/100 2012/08/29
